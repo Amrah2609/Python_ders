@@ -34,20 +34,3 @@ print(calculator(10, 5, "+"))  # 15
 print(calculator(10, 5, "test")) 
 
 
-
-def calclator(a, b, operation):
-    if operation == "+":
-        result = a + b
-    elif operation == "-":
-        result = a - b
-    elif operation == "*":
-        result = a * b
-    elif operation == "/":
-        if b == 0:
-            return "Xeta: B sifir ola bilmez"
-        result = a / b
-    else:
-        return "yanlis secim zehmet olmasa basqa secim edin"
-    return result
-
-print(calclator(5, 7, "-"))
