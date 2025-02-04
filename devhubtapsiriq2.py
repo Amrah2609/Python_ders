@@ -40,9 +40,9 @@
 
 
 
-# Tapşırıq:
+# Tapşırıq
 # 1-dən 10-a qədər olan cüt ədədləri çap edən bir döngü yazın.
 
-# for i in range(10):
-#     if i % 2 == 0:
-#         print(i)
+for i in range(10):
+    if i % 2 == 0:
+        print(i)
