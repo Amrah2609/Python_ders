@@ -44,7 +44,9 @@
 # def find_count(text):
 #     words = text.split()
 #     return len(words)
-# print(find_count("Hello world is this a sample "))
+# text = input("Cumle daxil edin: ")
+# word_xet_count = find_count(text)
+# print(f"cumle daxil edin: {word_xet_count}")
 
 
 # Task 3.

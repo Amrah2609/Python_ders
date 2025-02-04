@@ -33,3 +33,8 @@ except ValueError:
     print("Zehmet olmasa duzgun emeliyyat daxil edin!!!!!!")
 
 
+# Task 2.
+# Verilmiş yazıdakı sözlərin sayını tapan funksiya yaradın. İlkin argument söz olsun. nəticədə sayını qaytarsın
+
+# Input:
+# find_word_count("Hello world is this a sample text") # 7
