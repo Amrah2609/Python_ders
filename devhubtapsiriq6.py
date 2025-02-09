@@ -117,3 +117,31 @@
 # cat.melumat()
 # dog.make_sound()
 # cat.make_sound()
+
+
+
+
+
+
+
+class Car:
+    total_cars = 0
+
+    def __init__(self, model, year):
+        self.model = model
+        self.year = year
+        
+        Car.total_cars += 1
+
+    def display_info(self):
+        print(f"Model: {self.model}, Year: {self.year}")
+
+car1 = Car("Toyota ", 2020)
+car2 = Car("BMW", 2018)
+car3 = Car("Ford ", 2022)
+
+car1.display_info()
+car2.display_info()
+car3.display_info()
+
+print(f"Umumi say: {Car.total_cars}")
