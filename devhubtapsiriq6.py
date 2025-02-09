@@ -82,38 +82,38 @@
 # make_sound() metodunu hər sinifdə yenidən (override) təyin edin. Məsələn, Dog üçün print("Bark!"), Cat üçün print("Meow!").
 # Dog və Cat obyektləri yaradın, make_sound() metodlarını çağırın və fərqli nəticələr aldığınızı yoxlayın.
 
-class Animal:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# class Animal:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
 
-    def make_sound(self):
-        print("Some generic sound")
+#     def make_sound(self):
+#         print("Some generic sound")
 
-class Dog(Animal):
-    def __init__(self, name, age):
-        super().__init__(name, age)
+# class Dog(Animal):
+#     def __init__(self, name, age):
+#         super().__init__(name, age)
         
-    def melumat(self):
-        print(f"Dog melumat: Name = {self.name}, Age = {self.age}")
+#     def melumat(self):
+#         print(f"Dog melumat: Name = {self.name}, Age = {self.age}")
 
-    def make_sound(self):
-        print("Bark!")
+#     def make_sound(self):
+#         print("Bark!")
 
-class Cat(Animal):
-    def __init__(self, name, age):
-        super().__init__(name, age)
-    def melumat(self):
-        print(f"Cat melumat: Name = {self.name}, Age = {self.age}")
+# class Cat(Animal):
+#     def __init__(self, name, age):
+#         super().__init__(name, age)
+#     def melumat(self):
+#         print(f"Cat melumat: Name = {self.name}, Age = {self.age}")
 
-    def make_sound(self):
-        print("Meov")
+#     def make_sound(self):
+#         print("Meov")
 
 
-dog = Dog("Hex", 5)
-cat = Cat("Kedi", 4)
+# dog = Dog("Hex", 5)
+# cat = Cat("Kedi", 4)
 
-dog.melumat()
-cat.melumat()
-dog.make_sound()
-cat.make_sound()
+# dog.melumat()
+# cat.melumat()
+# dog.make_sound()
+# cat.make_sound()
