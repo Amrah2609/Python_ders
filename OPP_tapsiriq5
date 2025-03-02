@@ -1,0 +1,68 @@
+class BankAccount:
+    def __init__(self, hesab_nomresi, ad, valyuta, balans=0, hesab_aktivdir=True):
+        self.hesab_nomresi = hesab_nomresi
+        self.ad = ad
+        self.balans = balans
+        self.valyuta = valyuta
+        self.hesab_aktivdir = hesab_aktivdir
+    
+    def hesab_melumat(self):
+        print(f"Hesab Nömrəsi: {self.hesab_nomresi}")
+        print(f"Ad: {self.ad}")
+        print(f"Balans: {self.balans} {self.valyuta}")
+        print(f"Hesab Aktivdir: {self.hesab_aktivdir}")
+    
+    def balans_artir(self, miqdar):
+        if self.hesab_aktivdir:
+            self.balans += miqdar
+            print(f"{miqdar} {self.valyuta} hesabınıza əlavə olundu. Yeni balans: {self.balans} {self.valyuta}")
+        else:
+            print("Hesab aktiv deyil. Pul əlavə edilə bilməz.")
+    
+    def pul_cek(self, miqdar):
+        if self.hesab_aktivdir:
+            if miqdar > self.balans:
+                print("Balansda kifayət qədər pul yoxdur!")
+            else:
+                self.balans -= miqdar
+                print(f"{miqdar} {self.valyuta} hesabınızdan çıxarıldı. Yeni balans: {self.balans} {self.valyuta}")
+        else:
+            print("Hesab aktiv deyil. Pul çıxarıla bilməz.")
+    
+    def hesab_bagla(self):
+        if self.balans == 0:
+            self.hesab_aktivdir = False
+            print(f"Hesab {self.hesab_nomresi} bağlandı.")
+        else:
+            print("Hesab balansı sıfır deyil. Hesab bağlanmır.")
+    
+    def pul_kocur(self, diger_hesab, miqdar):
+        if self.hesab_aktivdir:
+            if miqdar > self.balans:
+                print("Balansda kifayət qədər pul yoxdur")
+            else:
+                self.balans -= miqdar
+                diger_hesab.balans += miqdar
+                print(f"{miqdar} {self.valyuta} {diger_hesab.ad} hesabına köçürüldü")
+        else:
+            print("Hesab aktiv deyil. Pul köçürülə bilməz")
+
+hesab1 = BankAccount("123456", "Əmrah Kərimov", "AZN", 1000)
+hesab2 = BankAccount("654321", "Aysel Məmmədova", "AZN", 500)
+
+hesab1.hesab_melumat()
+hesab2.hesab_melumat()
+
+hesab1.balans_artir(500)
+
+hesab2.pul_cek(200)
+
+hesab1.pul_kocur(hesab2, 300)
+
+hesab1.hesab_melumat()
+hesab2.hesab_melumat()
+
+hesab1.hesab_bagla()
+
+hesab2.pul_cek(300)
+hesab2.hesab_bagla()
